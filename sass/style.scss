@@ -1,0 +1,138 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'WeatherIcons';
+  src: url('../font/weathericons-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/weathericons-regular-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../font/weathericons-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/weathericons-regular-webfont.svg') format('svg'); /* Legacy iOS */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #7B5BB3;
+  font-family: "Open Sans";
+}
+
+h1 {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: #333333;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+#main {
+  border-radius: 16px;
+  border-radius: 16px;
+  margin-top: 1rem;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #F4F4FC;
+}
+
+
+.container-main {
+  height: 100%;
+  width: 100%;
+}
+
+header.header {
+  background-color: #edefef;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a#search-btn {
+  font-size: 2.1em;
+  width: 30%;
+  color: #444444;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+p {
+  display: inline !important;
+}
+
+input {
+  height: 60px;
+  width: 90%;
+  border-radius: 1rem;
+  padding: 1em 1em;
+  outline: none;
+  background: #ffff;
+  border: 1px solid #d3d3d3;
+}
+
+section.city {
+  font-size: 1rem;
+  background-color: #F4F4FC;
+  height: 100px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-city {
+  display: flex;
+}
+
+#icon {
+  height: 75px;
+  width: 75px;
+}
+
+section.weather {
+  font-size: 3rem;
+  background-color: #edefef;
+  height: 200px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: #F4F4FC;
+}
+
+.footer p {
+  animation: .3s ease-out 0s 1 slideInFromLeft;
+}
+
+@media screen and (min-width: 400px) {
+  #main {
+    max-width: 360px;
+    
+  }
+}
